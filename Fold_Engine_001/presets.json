@@ -1,0 +1,26 @@
+{
+  "defaults": {
+    "format": "1080x1350",
+    "panelCount": 12,
+    "panelWidth": 64,
+    "panelHeight": 480,
+    "foldAngle": 0,
+    "projection": "orthographic",
+    "offsetX": 0,
+    "offsetY": 0,
+    "displayScale": 1,
+    "palette": "campaign",
+    "strokeWeight": 1,
+    "fillOpacity": 1,
+    "outlines": true,
+    "annotations": true,
+    "transparent": false,
+    "exportScale": 1
+  },
+  "presets": [
+    { "id": "S01", "name": "Flat",        "params": { "foldAngle": 0 } },
+    { "id": "S02", "name": "Articulated", "params": { "foldAngle": 30 } },
+    { "id": "S03", "name": "Folded",      "params": { "foldAngle": 60 } },
+    { "id": "S04", "name": "Compressed",  "params": { "foldAngle": 75 } }
+  ]
+}

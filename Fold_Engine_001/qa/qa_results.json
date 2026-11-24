@@ -1,0 +1,106 @@
+{
+  "ranAt": "2026-11-24T16:20:01.594Z",
+  "browser": "Chromium (Playwright, headless)",
+  "results": [
+    {
+      "id": "MAT-01",
+      "status": "PASS",
+      "evidence": "θ=0°: formula W=768, projected vertex span=768, expected 768 (tol 1e-9)"
+    },
+    {
+      "id": "MAT-02",
+      "status": "PASS",
+      "evidence": "θ=60°: formula W=384.0000000000001, projected vertex span=384.0000000000001, expected 384 (tol 1e-9)"
+    },
+    {
+      "id": "MAT-03",
+      "status": "PASS",
+      "evidence": "θ=75°: formula W=198.77302663873593, projected vertex span=198.77302663873593, expected 198.77 (tol 0.005)"
+    },
+    {
+      "id": "GEO-01",
+      "status": "PASS",
+      "evidence": "4983 configurations (N 4–24 even × θ 0–75° step 0.5 × w 16/64/160): 0 shared-edge mismatches (exact equality, 3D + both projections); max rigid panel-width error 4.55e-13 u"
+    },
+    {
+      "id": "GEO-02",
+      "status": "PASS",
+      "evidence": "4983 configurations: 0 structural failures (vertex/panel counts, non-finite values); max centring error 0.00e+0 u; max W/D formula error 0.00e+0 u"
+    },
+    {
+      "id": "GEO-03",
+      "status": "PASS",
+      "evidence": "orthographic ignores z: true; oblique − orthographic = (−k·z·cos α, −k·z·sin α) max err 1.12e-13; at θ=0 modes identical (max diff 0); oblique outer-edge span = W (max err 2.27e-13)"
+    },
+    {
+      "id": "VAL-00",
+      "status": "PASS",
+      "evidence": "range validation (supplementary): {\"n5\":6,\"n3\":4,\"n30\":24,\"a90\":75,\"aNeg\":0,\"aBad\":0,\"op\":1,\"proj\":\"orthographic\",\"fmt\":\"1080x1350\"}"
+    },
+    {
+      "id": "PRE-00",
+      "status": "PASS",
+      "evidence": "presets.json identical to built-in fallback copy in sketch.js (supplementary): true"
+    },
+    {
+      "id": "DET-01",
+      "status": "PASS",
+      "evidence": "geometry JSON identical: true; two independent renders pixel SHA-256 9d4cb0e686d91586… vs 9d4cb0e686d91586…"
+    },
+    {
+      "id": "MOT-01",
+      "status": "PASS",
+      "evidence": "angles at frames 0/60/120/180/239 (t 0/2/4/6/7.967 s) = 0/0/75/30/30°; holds exact: true; monotonic in fold & release: true; midpoints f90=37.5°, f150=52.5°; max per-frame step 3.626°"
+    },
+    {
+      "id": "MOT-02",
+      "status": "PASS",
+      "evidence": "240-frame ZIP built twice: SHA-256 a45ce74805293cde… = a45ce74805293cde… (18.4 MB, 241 entries incl. config.json); frame 90 exported via UI scrubbing is byte-identical to frame_090.png in ZIP: true"
+    },
+    {
+      "id": "EXP-01",
+      "status": "PASS",
+      "evidence": "1080x1350@1× → 1080×1350; 1080x1920@1× → 1080×1920; 1080x1350@2× → 2160×2700; 1080x1920@2× → 2160×3840"
+    },
+    {
+      "id": "CFG-00",
+      "status": "PASS",
+      "evidence": "saved parameter configuration (FOLD-INDEX_S03_1080x1350_oblique.json) reloaded via \"Load config\" re-exports a byte-identical PNG (supplementary): true"
+    },
+    {
+      "id": "EXP-02",
+      "status": "PASS",
+      "evidence": "FOLD-INDEX_S03_1080x1350_orthographic_alpha_clean.png: corner/margin alpha = 0/0/0, centre alpha = 255; opaque share 12.76 % vs geometry footprint 12.64 %"
+    },
+    {
+      "id": "EXP-00",
+      "status": "PASS",
+      "evidence": "annotation-free export (supplementary): pixels differing from the ivory ground outside the geometry box (348–732 × 435–915 px, ±2 px): 0"
+    },
+    {
+      "id": "EXP-03",
+      "status": "PASS",
+      "evidence": "exported PNG byte-identical to a render of the artwork function alone: true; size 1080×1350 (no interface margin); controls inside artwork container: false"
+    },
+    {
+      "id": "ART-01",
+      "status": "NOT TESTED",
+      "evidence": "artistic judgement reserved to the founder. Supporting palette audit PASS: every dominant colour (>0.2 % of pixels) is an approved colour or an approved colour mixed toward Ink — rgb(238,232,216) 87.36%, rgb(125,142,154) 6.32%, rgb(71,52,44) 6.32%"
+    },
+    {
+      "id": "RUN-00",
+      "status": "PASS",
+      "evidence": "opened via file:// with no errors (supplementary); status: \"Opened from disk: using built-in presets (identical to presets.json).\""
+    },
+    {
+      "id": "SRC-01",
+      "status": "PASS",
+      "evidence": "files present: index.html, sketch.js, styles.css, presets.json, README.md, QA_REPORT.md (6/6); sketch.js 789 lines, plain unminified ES2020, 9/9 labelled sections, 90 comment lines; no build step"
+    },
+    {
+      "id": "RUN-01",
+      "status": "PASS",
+      "evidence": "page errors during the full QA run (supplementary): none"
+    }
+  ]
+}

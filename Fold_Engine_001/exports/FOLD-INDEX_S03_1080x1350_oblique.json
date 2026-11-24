@@ -1,0 +1,29 @@
+{
+  "engine": "FOLD ENGINE 001",
+  "version": "1.0.0",
+  "mode": "static",
+  "frame": 0,
+  "params": {
+    "panelCount": 12,
+    "panelWidth": 64,
+    "panelHeight": 480,
+    "foldAngle": 60,
+    "offsetX": 0,
+    "offsetY": 0,
+    "displayScale": 1,
+    "strokeWeight": 1,
+    "fillOpacity": 1,
+    "format": "1080x1350",
+    "projection": "oblique",
+    "palette": "campaign",
+    "exportScale": 1,
+    "outlines": true,
+    "annotations": true,
+    "transparent": false
+  },
+  "derived": {
+    "angleDeg": 60,
+    "W": 384.0000000000001,
+    "D": 55.42562584220407
+  }
+}

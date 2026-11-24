@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fold Engine 001</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="stage-wrap" aria-label="Artwork">
+      <div id="stage" class="stage"></div>
+      <p id="derived" class="derived"></p>
+      <p id="status" class="status" role="status"></p>
+    </section>
+
+    <aside class="panel" aria-label="Controls">
+      <header class="panel-head">
+        <h1>Fold Engine 001</h1>
+        <p>FOLD INDEX · Studies in Transformable Form</p>
+      </header>
+
+      <section>
+        <h2>Mode</h2>
+        <div class="seg">
+          <button type="button" data-mode="static">Static</button>
+          <button type="button" data-mode="sequence">Sequence</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Presets</h2>
+        <div id="presets" class="presets"></div>
+      </section>
+
+      <section>
+        <h2>Geometry</h2>
+        <div class="ctl" data-range="panelCount" data-label="Panels" data-unit="N"></div>
+        <div class="ctl" data-range="panelWidth" data-label="Panel width" data-unit="u"></div>
+        <div class="ctl" data-range="panelHeight" data-label="Panel height" data-unit="u"></div>
+        <div class="ctl" data-range="foldAngle" data-label="Fold angle" data-unit="°"></div>
+        <div class="row">
+          <label for="projection">Projection</label>
+          <select id="projection">
+            <option value="orthographic">Orthographic · front (true)</option>
+            <option value="oblique">Oblique · cabinet 60°, k 0.5</option>
+          </select>
+        </div>
+      </section>
+
+      <section>
+        <h2>Composition</h2>
+        <div class="row"><label for="format">Format</label><select id="format"></select></div>
+        <div class="ctl" data-range="offsetX" data-label="Position X" data-unit="px"></div>
+        <div class="ctl" data-range="offsetY" data-label="Position Y" data-unit="px ↓"></div>
+        <div class="ctl" data-range="displayScale" data-label="Display scale" data-unit="px/u"></div>
+      </section>
+
+      <section>
+        <h2>Treatment</h2>
+        <div class="row"><label for="palette">Palette</label><select id="palette"></select></div>
+        <div class="ctl" data-range="strokeWeight" data-label="Stroke weight" data-unit="px"></div>
+        <div class="ctl" data-range="fillOpacity" data-label="Fill opacity" data-unit=""></div>
+        <label class="check"><input type="checkbox" id="outlines"> Structural outlines</label>
+        <label class="check"><input type="checkbox" id="annotations"> Technical annotations</label>
+        <label class="check"><input type="checkbox" id="transparent"> Transparent background</label>
+      </section>
+
+      <section>
+        <h2>Sequence · 8 s · 240 frames</h2>
+        <div class="seg">
+          <button type="button" id="play">Play</button>
+          <button type="button" id="restart">Restart</button>
+        </div>
+        <input type="range" id="scrub" min="0" max="239" step="1" value="0" aria-label="Timeline frame">
+        <p id="frameReadout" class="readout"></p>
+        <button type="button" id="exportFrames" class="wide">Export 240 frames (PNG · ZIP)</button>
+      </section>
+
+      <section>
+        <h2>Export</h2>
+        <div class="row">
+          <label for="exportScale">PNG size</label>
+          <select id="exportScale">
+            <option value="1">1× (format size)</option>
+            <option value="2">2× (high resolution)</option>
+          </select>
+        </div>
+        <button type="button" id="exportPng" class="wide primary">Export PNG</button>
+        <div class="seg">
+          <button type="button" id="saveConfig">Save config</button>
+          <label class="file-btn">Load config<input type="file" id="loadConfig" accept="application/json,.json"></label>
+        </div>
+        <button type="button" id="reset" class="wide quiet">Reset parameters</button>
+      </section>
+    </aside>
+  </main>
+
+  <script src="lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
