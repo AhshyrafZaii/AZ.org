@@ -566,6 +566,8 @@
   }
 
   function downloadBlob(blob, name) {
+    // Optional host hook (used by the hosted preview, where downloads are blocked).
+    if (typeof window.FoldEngineDeliver === 'function') return window.FoldEngineDeliver(blob, name);
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;

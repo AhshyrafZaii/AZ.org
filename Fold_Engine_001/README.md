@@ -20,7 +20,12 @@ cd Fold_Engine_001
 python3 -m http.server 8000      # then open http://localhost:8000
 ```
 
-**On iPhone:** the engine does run in mobile Safari, but iOS's Files app cannot open a local HTML page with scripts, so the engine needs a Mac or some form of hosting. The finished sample outputs in `exports/` (PNG and MP4) can be viewed directly on the phone.
+**On iPhone:** use the private hosted preview (a claude.ai artifact, visible only to you unless you share it). It is built from these same sources by `tools/build_preview.py`, with everything inlined into one page.
+- *Export PNG* opens the full-size image in an overlay: press and hold it, then choose *Save to Photos*.
+- *Save config* shows the JSON with a Copy button.
+- The 240-frame ZIP export is available only on the Mac, because the hosted page cannot download files.
+
+iOS's Files app cannot open a local HTML page with scripts, so `index.html` itself needs the Mac.
 
 ---
 
@@ -125,6 +130,7 @@ Fold_Engine_001/
 ├── QA_REPORT.md
 ├── lib/p5.min.js     p5.js v1.11.1 (LGPL-2.1, see lib/p5.LICENSE.txt)
 ├── qa/run_qa.js      automated QA (Node + Playwright; not needed to use the engine)
+├── tools/build_preview.py  builds the single-file iPhone preview
 ├── qa/qa_results.json
 └── exports/          sample outputs produced by the QA run
 ```
